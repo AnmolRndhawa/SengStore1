@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENG | Home</title>
+  <link rel="icon" type="image/x-icon" href="IMGS/logo/2.png" sizes="48x48">
+  
+  <link rel="stylesheet" href="01-project2.css">
+  <link rel="stylesheet" href="02-carousel.css">
+  <link rel="stylesheet" href="03-menu.css">
+  <link rel="stylesheet" href="04-homeSections.css">
+  <link rel="stylesheet" href="05-bgDesign.css">
+  <style>
+:root{
+  --boxColor1:  #b7e249a0;
+  --footerFlexDirection: column;
+  --footerLinksMarginTop: 1rem;
+  --footerAttriGap : 2rem;
+}
+
+footer{
+  position: relative;
+  background-color: blueviolet;
+  min-height: 80svh;
+  align-content: center;
+  
+
+  
+}
+
+.footerWrapper{
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  min-height: 70svh;
+  width: 90vw;
+  padding: 1rem;
+  display: flex;
+  
+  justify-content: center;
+
+  
+
+   
+ 
+
+}
+.footerWrapper .footerAtrributes{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-direction:var(--footerFlexDirection);
+  gap: 2rem;
+  gap: var(--footerAttriGap);
+
+  padding: 0 2rem;
+  text-align: center;
+
+
+}
+.foterItems span{
+  font-weight: 600;
+  font-size: clamp(1rem,4vw,1.2rem);
+
+  
+}
+.foterItems .itemLinks{
+  
+  margin-top: var(--footerLinksMarginTop);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.itemLinks .links{
+  font-size: clamp(0.7rem, 1vw, 1rem);
+
+}
+.itemLinks .links a{
+  color: black;
+  text-underline-offset: 0.5rem;
+  text-decoration: underline double black;
+}
+
+.footerLogo{
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  
+  text-align: center;
+  inset: 0;
+  margin: auto;
+  align-content: end;
+  /* background-color: aqua; */
+
+}
+.footerLogo h1{
+ font-size: 25px;
+}
+
+
+  @media (width >= 950px){
+    .footerAtrributes{
+    --footerFlexDirection: row;
+    --footerAttriGap : 5rem;
+    }
+
+    .foterItems .itemLinks{
+      --footerLinksMarginTop: 3rem;
+    }
+    
+
+  }
+   
+   
+  </style>
+</head>
+
+<body>
+  <header>
+
+ <button class="Homebtn headerItems">
+  <img src="IMGS/home-svgrepo-com.svg" alt="home">
+ </button>
+
+    
+
+      
+    <button class="searchBtn headerItems">
+    <span>search</span>
+  </button>
+
+    <div class="headerSearch">
+      <input class="searchInput" type="search" placeholder="Search..SENG.com">
+    </div>
+
+  <!--  // search wrapper ends  -->
+
+
+   <!-- // menu //  -->
+
+   <div class="navWrapper headerItems">
+
+
+   </div>
+
+
+  </header>
+
+
+
+  <main>
+
+    <section class="bannerSec1">
+        
+      <div class="secBanner">
+         <video autoplay muted loop >
+          <source src="IMGS/banners/banner1.webm" type="video/webm">
+         </video> </div>
+
+         <div class="ppSliderSec1" style="
+         --width:100px;
+         --height:6svh;
+         ">
+          <div class="sliderItemsWrapper">
+            <div class="sliderItems" style="--positon:0">--OFFER!!! </div>
+           <div class="sliderItems" style="--positon:1">Get 20% </div>
+           <div class="sliderItems" style="--positon:2">Discounts </div>
+           <div class="sliderItems" style="--positon:3">on Apple </div>
+           <div class="sliderItems" style="--positon:4">products </div>
+           <div class="sliderItems" style="--positon:5"> Soon--</div>
+          
+
+          </div>
+         </div>
+
+     </section>
+    <!-- // section1  -->
+    <section class="sec1" id="sec1">
+      <div class="sectionContent">
+
+        <div class="SectionText">
+          <h1>New <span>arrivals</span></h1>
+          <ul class="Section1Links">
+            <li class="linkLists"><a href="#UpdateSec">Update</a></li>
+            <li class="linkLists"><a href="#Upcoming">Upcomming..</a></li>
+          </ul>
+        </div>
+
+        <!-- // Products // -->
+
+        <div content="latest" class="productsWrapper"></div>
+
+      </div>
+    </section>
+     
+    <!-- // banner sec2 -->
+     <section class="bannerSec2">
+        
+      <div class="secBanner"  style="--bgUrl1: url(IMGS/banners/watchbase1.jpg);">
+          <div class="details">
+            <h1>Apple Series</h1>
+            <a href="watchesPage.html">Watches>></a>
+          </div>
+
+     </section>
+
+     <!-- // section 2 -->
+      <section class="sec2">
+        
+        <div class="s2design">
+          <div class="s2Cricle"  style="
+          --designGradient: linear-gradient(to top,rgba(255, 5, 5, 0.8), rgba(255, 5, 180, 0.8), rgba(55, 125, 255, 0.651), rgba(6, 93, 255, 0.446));
+            "></div>
+          <div class="s2Cricle"></div>
+          
+          <div class="blurpage"></div>
+          
+        </div>
+        
+        <!-- carousel //  -->
+
+        <div class="carouselWrapper">
+      
+          <i id="left" class="fa-solid fa-arrow-left  js-arrowLeft" move-left="false"></i>
+          <i id="right" class="fa-solid fa-arrow-right js-arrowRight" move-right="false"></i>
+          <div content="apple Watch" class="carousel">
+            
+
+              <div class="card"></div>
+                
+        </div>
+        </div>
+       
+        <div class="sectionContent">
+
+          <div class="SectionText">
+            <h1>Apple <span>Products</span></h1>
+            </div>
+          <div content="apple" contentSize="short" class="productsWrapper"></div>
+       </div>
+
+  
+
+      </section>
+    <!-- // banner sec3 -->
+     <section class="bannerSec3">
+        
+      <div class="secBanner"  style="--bgUrl1: url(IMGS/banners/hP1.png);">
+          <div class="details">
+            <h1>Nothing</h1>
+            <a href="shopPage.html">Shop>></a>
+          </div>
+
+     </section>
+
+     <!-- // section 3 -->
+      <section class="sec3">
+        
+        <div class="s2design">
+          <div class="s2Cricle" style="
+          --designGradient: linear-gradient(to top, rgba(255, 88, 5, 0.8 ), rgba(255, 6, 64, 0.8), rgba(255, 6, 122, 0.8));
+          "></div>
+          <div class="s2Cricle"></div>
+          
+          <div class="blurpage"></div>
+          
+        </div>
+        
+        <!-- carousel //  -->
+
+        <div class="carouselWrapper">
+      
+          <i id="left" class="fa-solid fa-arrow-left  js-arrowLeft" move-left="false"></i>
+          <i id="right" class="fa-solid fa-arrow-right js-arrowRight" move-right="false"></i>
+          <div content="nothing" class="carousel">
+            
+
+              <div class="card"></div>
+                
+        </div>
+        </div>
+       
+        <div class="sectionContent">
+
+          <div class="SectionText">
+            <h1> arriving <span>soon</span></h1>
+            </div>
+          <div content="upcoming" contentSize="short" class="productsWrapper" id="Upcoming"></div>
+       </div>
+
+       
+  
+
+      </section>
+
+      <section class="updateSec" id="UpdateSec">
+        <h1>UPDATE</h1>
+        
+        <div class="updatesWrapper">
+
+
+          <div class="updateBox diwalioffer">
+            <p>Stay tuned for our upcoming Diwali and New Year 2025 sale! Get ready to discover exciting deals on the latest tech</p>
+          </div>
+          <!-- // box 2  -->
+          <!-- // box 2  -->
+          <div class="updateBox update1">
+            <p>Exciting times are just ahead, with more products soon to spread! Our collection will never end. Keep an eye and stay in the loop</p>
+          </div>
+
+
+        </div>
+      </section>
+    
+  </main>
+  
+
+  <footer>
+    <div class="footerWrapper">
+       <ul class="footerAtrributes">
+        <li class="foterItems"><span>About Project</span>
+        
+          <ul class="itemLinks">
+            <li class="links"><mark>Title : </mark>Last Semester Project</li>
+            <li class="links"><mark>Submitted to : </mark>Lovely Professional University</li>
+            <li class="links"><a href="aboutUsPage.html">More..</a></li>
+          </ul>
+        
+        </li>
+        <li class="foterItems"><span>About Student</span>
+        
+          <ul class="itemLinks">
+            <li class="links">NAME: Anmolpreet Singh</li>
+            <li class="links">Cource: BCA</li>
+            <li class="links"><a href="aboutUsPage.html">More..</a></li>
+          </ul>
+        
+        </li>
+        <li class="foterItems"><span>Links</span>
+        
+          <ul class="itemLinks">
+            <li class="links"><a href="#">GitHub link</a></li>
+            <li class="links"><a href="In">X- Handel</a></li>
+          </ul>
+        
+        </li>
+       </ul>
+
+    </div>
+
+   <div class="footerLogo">
+    
+      <h1>SENG.com</h1>
+
+    
+   </div>
+     
+
+  </footer>
+
+<script src="02-menu.js"></script>
+<script src="01-products.js"></script>
+<script src="productsAlgorithm.js"></script>
+<script src="searchAlgo.js"></script>
+<script src="productViewerAlgo.js"></script>
+<script src="https://kit.fontawesome.com/2c1e476ec5.js" crossorigin="anonymous"></script>
+</body>
+
+<script>
+ 
+
+  
+</script>
+
+</html>

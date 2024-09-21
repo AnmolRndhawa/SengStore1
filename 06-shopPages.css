@@ -1,0 +1,52 @@
+:root{
+    --ProductSecPadding:1rem;
+    --primaryWhite: white;
+}
+
+
+.productSecShop{
+    padding: 1rem;
+    padding: var(--ProductSecPadding);
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.productSecShop:nth-child(1){
+    margin-top: 5rem;
+
+}
+  
+
+@media(width>= 1200px){
+    .productSecShop{
+        --ProductSecPadding:2rem;
+    }
+}
+
+.ShopBanner{
+    background: linear-gradient(to top , rgba(0, 0, 0, 0.73),transparent),var(--Img);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    min-height: 50svh;
+
+    text-align: start;
+    align-content: end;
+
+    padding: 2rem;
+}
+
+
+.bannerDetails h1{
+    
+    font-size: clamp(2rem,8vw,5rem);
+    color: var(--primaryWhite);
+}
+.bannerDetails p{
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
+    color: var(--primaryWhite);
+
+}

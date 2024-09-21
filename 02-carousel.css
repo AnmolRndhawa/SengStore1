@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root{
+--primary-white: white;
+--background-color1:rgb(217, 255, 0);
+--prefer-white1: #fefcff;
+--primary-black: black;
+--prefer-gray1-Carousel: rgb(86, 86, 86);
+--cards-on-viewport: 4;
+--cards-on-viewport-margin: 0;
+--cards-gap: 1.2rem;
+--cards-min-height: 15rem;
+--card-left-column:20%;
+--cards-width: 20rem;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins" , sans-serif;
+}
+
+
+
+
+
+
+
+.carouselWrapper{
+   margin: auto;
+   
+   position: relative;
+   /* background-color:var(--prefer-gray1); */
+   
+   height: min(400px);
+   display: flex;
+   /* gap: 1rem; */
+   
+   
+   
+   
+}
+.carousel{
+   position: relative;
+   margin: 0 auto;
+   background: transparent;
+    /* background-color:var(--prefer-gray1); */
+   padding: 2rem;
+   display: grid; 
+   grid-auto-flow: column;
+   grid-auto-columns: calc((100vw / var(--cards-on-viewport)));
+   gap: var(--cards-gap);
+   overflow-x: auto;
+   user-select: none;
+   scroll-behavior: smooth;
+   scrollbar-width: none;
+
+}
+.card{
+   position: relative;
+   background-color: var(--prefer-white1);
+   border: 1px solid var( --prefer-gray1-Carousel);
+   width: var(--cards-width);
+   min-height: var(--cards-min-height);
+   display: grid;
+   grid-template-columns: var(--card-left-column) 1fr;
+   grid-template-rows: 50% 1fr 25%;
+   border-radius: 30px;
+   overflow: hidden;
+   gap: 0.5rem 0;
+   cursor: pointer;
+   
+   
+
+   
+}
+.cardImg{
+   grid-row: 1/1;
+   grid-column: 1/3;
+
+   
+}
+.cardImg img{
+    
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+
+    
+}
+.card h2{
+   font-size: 0.8rem;
+   grid-row: 2/2;
+   grid-column: 2/3;
+   
+   
+}
+.card h2 p{
+   font-size: 1rem;
+   background-color: var(--primary-black);
+   color: var(--primary-white);
+   
+}
+.card details{
+  
+   margin: 0 auto;
+   grid-row: 3/3;
+   grid-column: 1/3;
+   
+}
+.card details summary{
+   
+   user-select: none;
+   cursor: pointer;
+   list-style: none;
+   font-size: 1rem;
+   background-color: var(--primary-black);
+   padding: 1rem 2rem;
+   border-radius: 30px;
+   color: var(--primary-white);
+   
+}
+
+.card details summary:hover{
+   transition: 0.5s;
+   padding: 1rem 2.5rem;
+}
+
+
+.details--div{
+   background: transparent;
+   position: absolute;
+   width: 100%;
+   min-height: 70%;
+   text-align: center;
+   top: 0 ;
+   left: 0;
+   backdrop-filter: blur(12px);
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 65% 1fr;
+    
+    align-items: center;
+    
+   }
+   
+   .details--div p{
+       user-select: none;
+       grid-row: 1/1;
+       grid-column: 1/5;
+   }
+.details--div button{
+   background-color:  var(--background-color1);
+   grid-row: 2/2;
+   grid-column: 2/4;
+   min-height: 3rem;
+   border-radius: 30px;
+   cursor: pointer;
+   box-shadow: 0 8px 10px 0 rgb(120, 120, 120);
+    
+}
+.details--div button:hover{
+   transition: 1s ease-out;
+   background: linear-gradient(to right, var(--background-color1) , white )
+
+}
+
+
+
+.carouselWrapper i{
+   cursor: pointer;
+   position: absolute;
+   background-color: red;
+   height: 3rem;
+   width: 3rem;
+   font-size: 2rem;
+   line-height: 3rem;
+   text-align: center;
+   border-radius: 100%;
+   box-shadow: 4px 8px 20px 0 rgb(93, 93, 93);
+ 
+   z-index: 999;
+   top: 9rem;
+}
+.carouselWrapper i:nth-child(1){
+   left: 0;
+   
+}
+.carouselWrapper i:nth-child(2){
+   right: 0;
+
+}
+
+@media (width > 975px) and (width<1300px) {
+.carousel{
+   --cards-on-viewport : 3;
+   --cards-on-viewport-margin:0;
+}
+
+}
+@media (width > 590px) and (width <975px){
+
+.carousel{
+   --cards-on-viewport : 2.3;
+   --cards-gap: 1rem;
+   
+}
+.card{
+   width: clamp(15rem, 40vw, 20rem);
+}
+}
+
+@media (width < 590px){
+.carousel{
+   --cards-on-viewport : 1.5;
+   --cards-gap:1rem;
+}
+.card{
+   --cards-width: 15rem
+   --cards-min-height:20rem;
+   --card-left-column:10%;
+}
+
+}

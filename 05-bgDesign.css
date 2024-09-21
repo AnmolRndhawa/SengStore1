@@ -1,0 +1,219 @@
+
+:root{
+    --quantity:6;
+    --boxColor1:  #b7e249a0;
+    --aspectRofUpdateBox:0.5;
+    --textMoveY: 35%;
+}
+.s2design{ 
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    min-height: 140svh;
+    /* background-color: black; */
+
+    overflow: hidden;
+}
+.s2Cricle{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    animation: updownAnimate 3s linear infinite;
+    opacity: 0.8;
+    background-image: var(--designGradient);
+    width: 30vw;
+    z-index: 2;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+.s2Cricle:nth-child(2){
+    right: 50%;
+    left: 50%;
+    animation: updownAnimate 3s linear infinite;
+    position: absolute;
+    z-index: -2;
+    width: 40vw;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    background-image: linear-gradient(to top,  rgba(255, 5, 151, 0.2),  rgba(255, 5, 151, 0.2),  rgba(255, 5, 151,0.2));
+    
+}
+.blurpage{
+    z-index: 2;
+    position: absolute;
+    /* background-color: rgb(191, 255, 0); */
+    background: transparent;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    width: 100%;
+    min-height: 100%;
+}
+
+@keyframes updownAnimate{
+    0%{
+        transform: translate(-50%,-150%);
+        scale: 0.2;
+    }
+    50%{
+        
+        scale: 2;
+    }
+    100%{
+        transform: translate(-50%,200%);
+        scale: 0.2;
+    }
+}
+
+
+/* // offer pp slider  */
+
+.ppSliderSec1{
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    position: absolute;
+    width: 100%;
+    min-height: var(--height);
+    overflow: hidden;
+    background-color: var(--boxColor1);
+  }
+  .sliderItemsWrapper{
+    position: relative;
+    display: flex;
+    
+  }
+  .sliderItemsWrapper .sliderItems{
+    flex-shrink: 0;
+    
+    color: var(--primary-black);
+   font-size: 0.8rem;
+   font-size: clamp(0.8rem, 3vw, 1rem);
+    position: absolute;
+    transform: translate(0,20%);
+    
+    /* color: var(--primary-white); */
+    
+    width: var(--width);
+    min-height: var(--height) ;
+    left: 100%;
+    animation: ppslideAnimate 10s linear infinite;
+    
+   animation-delay: calc((10s/var(--quantity)) * var(--positon));
+  }
+
+  .ppSliderSec1:hover .sliderItems{
+    animation-play-state: paused;
+  }
+
+  @keyframes ppslideAnimate{
+
+      from{
+        left: 100% ;
+        
+
+      }
+      to{
+        left: calc(var(--width) * -1) ;
+      }
+  }
+
+  @media (width>= 1200px){
+    .sliderItemsWrapper .sliderItems{
+   
+        --quantity:15;
+        
+    }
+  }
+
+  /* // update sexction design  */
+
+  .updateSec{
+    background: var(--primary-white);
+    position: relative;
+    text-align: center;
+    justify-items: center;
+    overflow: hidden;
+    
+    
+    min-height: 100svh;
+  }
+  .updateSec h1{
+    position: absolute;
+    color: black;
+    font-size: 25svw;
+    inset: 0;
+    margin: auto;
+
+    transform: translateY(35%);
+    transform: translateY(var(--textMoveY));
+    
+    z-index: 1;
+  }
+  .updatesWrapper{
+    position: relative;
+    /* background-color: black; */
+    
+    width: 60vw;
+    margin: 2rem auto;
+    min-height: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    gap: 5rem;
+    
+    
+  }
+  .updateBox{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    
+    
+    width: 100%;
+    z-index: 2;
+    
+  aspect-ratio: 1/0.5;
+  aspect-ratio: 1/var(--aspectRofUpdateBox);
+    align-content: center;
+    padding: 0.5rem;
+    border-radius: 12px;
+    box-shadow: 4px 8px 20px 0 rgb(103, 2, 255);
+    
+
+  }
+  .diwalioffer{
+    transform:rotate(-6deg);
+    background-color: var(--boxColor1);
+    
+  }
+  .update1{
+    transform:rotate(6deg);
+    background-color: var(--boxColor1);
+
+  }
+
+
+  .updateBox p{
+    font-size: clamp(1rem, 4.2vw, 2rem);
+    color: var(--primary-black);
+    
+    
+  }
+  @media (width<= 600px){
+ 
+      .updateBox{
+        --aspectRofUpdateBox:1;
+      }
+        
+  }
+
+  @media (width>= 970px){
+    .updateSec h1{
+      --textMoveY: 10%;
+    }
+    .updateBox{
+      --aspectRofUpdateBox:0.3;
+      width: 50%;
+    }
+  }
