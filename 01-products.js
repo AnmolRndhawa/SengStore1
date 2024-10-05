@@ -1,9 +1,9 @@
 const productLog = [
     {
-
+      id: "pd-01",
       type: 'ear-buds',
       name: 'Beats Studio Buds',
-      price: '₹ 19,000',
+      price: '19,000',
       company:'Apple',
 
       description: `Experience powerful sound with the compact and wireless Beats Studio Buds. These earbuds feature active noise cancelation, seamless device pairing, 
@@ -15,10 +15,10 @@ const productLog = [
       bgColor: 'white'
     },
     {
-
+      id: "pd-02",
       type: 'ear-buds',
       name: 'Audio-Technica ATH-TWX7GY',
-      price: '₹ 16,400',
+      price: '16,400',
       company:'Technica',
       
       description: `Discover premium audio with Audio-Technica ATH-TWX7GY buds. These wireless earbuds offer superior sound quality, adaptive noise cancelation,
@@ -31,10 +31,10 @@ const productLog = [
       bgColor: 'white'
     },
     {
-
+      id: "pd-03",
       type: 'smart-watch',
       name: 'apple Watch Series-6',
-      price: '₹ 33,500',
+      price: '33,500',
       company:'Apple',
       
       description: `Stay connected and monitor your health with the Apple Watch Series 6. Featuring a blood oxygen sensor, ECG app, and always-on Retina display, it’s your ultimate fitness and wellness companion.`,
@@ -46,10 +46,10 @@ const productLog = [
 
     },
     {
-
+      id: "pd-04",
       type: 'smart-watch',
       name: 'apple Watch Series-6 (purple)',
-      price: '₹ 33,500',
+      price: '33,500',
       company:'Apple',
       
       description: `Stay connected and monitor your health with the Apple Watch Series 6. Featuring a blood oxygen sensor, ECG app, and always-on Retina display, it’s your ultimate fitness and wellness companion.`,
@@ -60,10 +60,10 @@ const productLog = [
       bgColor: '#9d7eb3'
     },
     {
-
+      id: "pd-05",
       type: 'smart-watch',
       name: 'CMF Watch Pro',
-      price: '₹4,490',
+      price: '4,490',
       company:'Nothing',
       
       description: `Meet the CMF Watch Pro by Nothing—a smartwatch that redefines simplicity with cutting-edge tech. Designed to offer a seamless experience, the CMF Watch Pro blends sleek, minimalist aesthetics with powerful features like real-time fitness tracking, 
@@ -76,10 +76,10 @@ const productLog = [
       bgColor: 'white'
     },
     {
-
+      id: "pd-06",
       type: 'smart-watch',
       name: 'boAt Watch Xtend',
-      price: '₹3,200',
+      price: '3,200',
       company:'boAt',
       
       description: `Introducing the boAt Watch Xtend, the ultimate blend of style, functionality, and affordability! This smartwatch, crafted by the popular brand boAt, is designed to keep you connected and on top of your game. Whether you're tracking your fitness, 
@@ -92,10 +92,10 @@ const productLog = [
       bgColor: 'white'
     },
     {
-
+      id: "pd-07",
       type: 'Virual Reality Vr',
       name: 'Apple Vision Pro',
-      price: '₹3,70,000',
+      price: '3,70,000',
       company:'Apple',
       
       description: `Apple Vision Pro
@@ -110,10 +110,10 @@ ergonomic design and long battery life, Apple Vision Pro is built for extended c
       bgColor: 'black'
     },
     {
-
+      id: "pd-08",
       type: 'smart-watch',
       name: 'Apple Watch Series 8',
-      price: '₹75,000',
+      price: '75,000',
       company:'Apple',
       
       description: `Apple Watch Series 8
@@ -128,10 +128,10 @@ Stay in touch with loved ones through calls, texts, and emails, all directly fro
       bgColor: 'white'
     },
     {
-
+      id: "pd-09",
       type: 'ear-buds',
       name: 'Nothing Ear Stick',
-      price: '₹8,999',
+      price: '8,999',
       company:'Nothing',
       
       description: `Nothing Ear Stick
@@ -147,7 +147,8 @@ the Ear Stick ensures you stay connected throughout the day, and its fast-chargi
     },
     
     
-    {
+    { 
+      id: "pd-10",
       type: 'ear-buds',
       name: 'JBL Tune Flex ghost white',
       price: 'COMING SOON!',
@@ -164,7 +165,7 @@ the Ear Stick ensures you stay connected throughout the day, and its fast-chargi
       bgColor: 'white'
     },
     {
-      
+      id: "pd-11",
       type: 'ear-buds',
       name: 'JBL Tune Flex ghost black',
       price: 'COMING SOON!',

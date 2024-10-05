@@ -1,10 +1,3 @@
-// logo button setting
-
-const homebtn =document.querySelector('.Homebtn');
-
-homebtn.addEventListener("click",()=>{
-  window.location.href = 'index.html';
-});
 
 
 const searchButton = document.querySelector('.searchBtn');
@@ -13,12 +6,12 @@ const searchBar = document.querySelector('.searchInput');
 
 searchButton.addEventListener("click", ()=>{
   let searchVisibleValue = searchBar.style.display;
-  console.log(`vivibility of menue : ${searchVisibleValue}`);
+ 
   searchBar.style.display = searchVisibleValue === 'none' ? 'block' : 'none';
 
   
   searchText.style.opacity =  searchVisibleValue === 'none' ? '1' : '0.8';
-  console.log(`vivibility of menue toggle : ${searchVisibleValue}`);
+ 
 
   
 
@@ -86,7 +79,7 @@ if (searchedValue) {
 
   resultDisplay.innerHTML = htmlGenerator2;
   
-  console.log(`searched items:`, filteredProducts);
+ 
 }
 
  else{

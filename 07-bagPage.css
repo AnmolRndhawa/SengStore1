@@ -1,0 +1,254 @@
+:root {
+    --primary-black: black;
+    --primary-white: white;
+    --prefer-gray1: #f2f2f2;
+    --prefer-gray2: #e9e9e9;
+    --prefer-gray3: #e0e0e0;
+    --background-color1:rgb(217, 255, 0);
+    --font-gray : rgb(142, 142, 142);
+    --bagWrapperFlex : column;
+   
+  
+  }
+  .bagSec1{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 30svh;
+  }
+    
+  
+      .primaryInfo{
+        background-color: var(--prefer-gray1);
+        width: 100%;
+       position: relative;
+       margin-top: 1rem;
+       padding: 1rem;
+       display: grid;
+       grid-template-columns: 1fr 60%;
+       grid-template-rows: repeat(3,1fr);
+
+       gap: 0.5rem 1rem;
+  
+      }
+     
+      .primaryInfo .cartLabel{
+        margin-left: auto;
+        margin-right: 0;
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      
+      .primaryInfo .cartLabel, .bagHeading, .billHeading{
+        align-content: center;
+        color: var(--font-gray);
+        font-size: clamp(0.8rem, 4vw, 2rem);
+        
+        
+      }
+      .primaryNumbers{
+        grid-column: 2/3;
+        grid-row: 1/4;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        
+      }
+      .primaryInfo .primaryChilds{
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+      }
+      
+      .totalAmount:first-child{
+        background: var(--background-color1);
+        font-size: clamp(1rem, 8vw , 3rem);
+  
+      }
+       
+  
+  
+      .bagSec2{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        width: min(500px,100%);
+        margin: auto;
+        
+      }
+      
+      .BagWrapper{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-height: 65svh; /* Maximum height */
+        height: auto;      /* Adjust height when fewer children */
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        
+        
+      }
+      .bagitems{
+        position: relative;
+        background-color: var(--prefer-gray1);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 25svh;
+        border-radius: 12px;
+      }
+      .quantityCtrl{
+        display: flex;
+        flex-direction: column;
+      }
+      
+      
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .quantityCtrl .inputField, .Qbuttons{
+        text-align: center;
+        min-height: 2rem;
+        background: transparent;
+        border: 0.2px solid var(--prefer-gray3);
+      }
+      .quantityCtrl .inputField{
+        font-weight: 600;
+        font-size: 1.1rem;
+        user-select: none;
+      }
+      
+      .Qbuttons{
+        opacity: 0.6;
+        cursor: pointer;
+      }
+      
+      .itemPicture{
+        background-color: yellow;
+        background: var(--itemPicture);
+        background-position: center;
+        background-size: cover;
+        width: 120px;
+        min-height: 120px;
+      }
+      .itemDetails{
+        display: flex;
+        flex-direction: column;
+        
+        
+      }
+      .itemDetails h1{
+        font-size: clamp(1rem, 4vw, 2rem);
+      }
+  
+      .removeItemBtn{
+        position: absolute;
+        border-radius: 12px;
+        padding: 0.5rem 0;
+        width: 30%;
+        right: 50%;
+        bottom: 30%;
+        left: 50%;
+        transform: translate(60%, 120%);
+        cursor: pointer;
+        overflow: hidden;
+      }
+  
+      .bagSec3{
+        margin: auto;
+        width: min(500px,100%);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column ;
+        gap: 2rem;
+        
+      }
+      .billWrapper{
+        width: min(500px,100%);
+        margin: auto;
+      }
+      .billList{
+        min-height: 50svh;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--prefer-gray1);
+        border-radius: 12px;
+        /* text-align: center; */
+         padding: 2rem;
+      }
+  
+      .billList li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        font-weight: 600;
+  
+  
+      }
+      .billList li span:nth-child(1){
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+  
+      }
+      .billList li:last-child{
+        background-color: var(--background-color1);
+        font-size: 1.6rem;
+      }
+      .proceedButton{
+        padding:1rem;
+        border: 0.5px solid rgb(147, 147, 147);
+        border-radius: 30px;
+        text-align: center;
+        width: min(500px,100%);
+        margin: auto;
+        color: var(--primary-black);
+        font-weight: 600;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        cursor: pointer;
+      }
+       
+      .OfferDetails{
+        font-size: clamp(0.5rem, 2vw, 0.7rem);
+        opacity: 0.6;
+      }
+  
+      /* // responsiveness  */
+      /* // responsiveness  */
+      /* // responsiveness  */
+  
+      @media (width >=950px){
+  
+        .bagMain{
+  
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-template-rows: 35svh 1fr;
+          
+          
+        }
+        .bagSec1{
+          align-items: end;
+          grid-column: 1/3;
+          grid-row: 1;
+        }
+        .bagSec2{
+          grid-column: 1/2;
+          grid-row: 2;
+          min-height: 100%;
+        }
+        .bagSec3{
+          grid-column: 2/3;
+          grid-row: 2;
+        }
+       
+        .bagitems{
+          width: 100%;
+          
+        }
+      }

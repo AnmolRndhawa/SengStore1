@@ -3,7 +3,7 @@ const productDiv = document.querySelectorAll('.Viewproducts');
 productDiv.forEach((item) =>{
   item.addEventListener("click",()=>{
     productName = item.getAttribute("productName");
-    console.log(`pname : ${productName}`);
+   
     
   
   if(productName){
@@ -24,7 +24,7 @@ function getNameQuery(nameParameter){
 }
 
 let productName = getNameQuery('query');
-console.log(` the name of the product is : ${productName}`);
+
 
 productLog.forEach((item)=>{
   if(productName===item.name){
@@ -32,9 +32,9 @@ productLog.forEach((item)=>{
                
                 
                 <div class="imageSlider">
-                    <img src="${item.image}" alt="">
-                    <img src="${item.image2}" alt="">
-                    <img src="${item.image3}" alt="">
+                    <img src="${item.image}"  loading="lazy" alt="">
+                    <img src="${item.image2}" loading="lazy" alt="">
+                    <img src="${item.image3}" loading="lazy" alt="">
                 </div>
 
     </div>
@@ -57,5 +57,21 @@ productLog.forEach((item)=>{
     
     </div>
     `;
+
+
+    
+
+// setting product info  to cart button
+const buttonSection = document.querySelector('.pvButtons');
+buttonSection.innerHTML = ` <button class="cartButton" data-product-id="${item.id}">Add To Cart</button>
+            <button><a class="bagLink" href=""> <img src="IMGS/bag-smile-svgrepo-com.svg" loading="lazy" alt="">
+            <div class="bagCounter" id="bagCounter2" counterVisible ="none">!</div>
+            </a></button>`;
+
+
+
   }
-})
+
+});
+
+

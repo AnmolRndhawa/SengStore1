@@ -29,7 +29,7 @@
 
     if (itemDetails.includes( sortByInput.toLowerCase())) {
 
-      console.log(' match found!');
+  
 
       if(contentSize=== 'short'){
         clothesProducts.push(item);
@@ -42,12 +42,12 @@
       
 
     } else if (sortByInput === "collection") {
-      console.log(' collection found!');
+      
       clothesProducts.push(item);
     }
     else if (sortByInput === "latest") {
       let slicedArray = productLog.slice(-4);
-      console.log('latest found!');
+     
       clothesProducts = slicedArray;
 
     }
@@ -143,7 +143,7 @@
 
           </div>
           `;})
-          console.log(`car html = ${carouselHTML}`);
+        
           itemParam.innerHTML = carouselHTML;
 
 
@@ -159,7 +159,7 @@
   function carouselMover(itemParam){
 const firstSlide = itemParam.querySelector('.card');
 const firstSlideWidth = firstSlide.clientWidth;
-console.log(`card width: ${firstSlideWidth}`);
+
 
 // Select the arrows
 const parentDiv = itemParam.parentElement;
@@ -171,7 +171,7 @@ slideArrows.forEach(icon => {
   icon.addEventListener("click", () => {
     // Scroll left or right based on the arrow clicked
     itemParam.scrollLeft += icon.id === "left" ? - firstSlideWidth : firstSlideWidth;
-    console.log(`icon id : ${icon.id}`);
+  
 
   // carasule buttuons hide effect 
   // carasule buttuons hide effect 

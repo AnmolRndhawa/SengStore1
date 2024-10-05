@@ -223,7 +223,8 @@
 
     .pvButtons {
         display: grid;
-        margin: 0 auto;
+        margin: 0 auto 0.5rem auto;
+
         grid-template-columns: repeat(4, minmax(75px, 5rem));
 
         
@@ -235,7 +236,9 @@
         cursor: pointer;
         border: 0.5px solid;
     }
-    
+    .cartButton[ data-product-id = "pd-11" ], .cartButton[ data-product-id = "pd-10" ]{
+        display: none;
+    }
     .pvButtons button:nth-child(1) {
         border-radius: 20px;
         
@@ -244,9 +247,9 @@
         color: var(--primary-white);
     }
     .pvButtons button:nth-child(2){
-
+        position: relative;
         border-radius: 100%;
-        width: clamp(50px, 15vw , 60px);
+        width: clamp(45px, 14vw , 60px);
 
         
         aspect-ratio: 1/1;
@@ -254,9 +257,13 @@
         background-color: var(--primary-white);
     }
     .pvButtons button:nth-child(2) img{
-        width: 4ch;
+        width: 4ch;  
     }
-
+    
+    #bagCounter2{
+        top:0;
+    }
+    
     /* // responsive //  */
 
     @media (width>=450px) and (width<=745px) {
@@ -321,8 +328,8 @@
 
     <header>
 
-        <button class="Homebtn headerItems">
-         <img src="IMGS/home-svgrepo-com.svg" alt="home">
+        <button class="headerItems backbtn" id="backButton">
+         <img src="IMGS/back-svgrepo-com.svg" loading="lazy" alt="home">
         </button>
        
            
@@ -357,9 +364,9 @@
             <div class="pvImages" style="--pvUrl : url(IMGS/products/BBUDS2.jpg)">
 
                 <div class="imageSlider">
-                    <img src="IMGS/products/BBUDS1.jpg" alt="">
-                    <img src="IMGS/products/BBUDS2.jpg" alt="">
-                    <img src="IMGS/products/BBUDS3.jpg" alt="">
+                    <img src="IMGS/products/BBUDS1.jpg" loading="lazy" alt="">
+                    <img src="IMGS/products/BBUDS2.jpg" loading="lazy" alt="">
+                    <img src="IMGS/products/BBUDS3.jpg" loading="lazy" alt="">
                 </div>
 
                
@@ -391,19 +398,17 @@
 
 
         <div class="pvButtons">
-            <button>Buy Item</button>
-            <button><a href="index.html"> <img src="IMGS/shopping-bag.svg" alt="">
-
-            </a></button>
+           
         </div>
     </main>
 
     
-    <script src="02-menu.js"></script>
     <script src="01-products.js"></script>
+    <script type="module" src="02-menu.js"></script>
     <script src="searchAlgo.js"></script>
     <script src="productsAlgorithm.js"></script>
     <script src="productViewerAlgo.js"></script>
+    <script src="cart-Items.js"></script>
 </body>
 
 </html>
