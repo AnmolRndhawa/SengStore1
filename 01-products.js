@@ -41,7 +41,7 @@ const productLog = [
 
       image: "IMGS/products/CWATCH1.jpg",
       image2: "IMGS/products/CWATCH2.jpg",
-      image3: "",
+      image3: "IMGS/products/appleLogo.jfif",
       bgColor: 'white'
 
     },
@@ -56,7 +56,7 @@ const productLog = [
 
       image: "IMGS/products/CWATCH2.jpg",
       image2: "IMGS/products/CWATCH1.jpg",
-      image3: "",
+      image3: "IMGS/products/appleLogo.jfif",
       bgColor: '#9d7eb3'
     },
     {
